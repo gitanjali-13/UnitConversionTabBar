@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7Da-LG-85o">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Length -->
+        <scene sceneID="gmg-KT-cWz">
+            <objects>
+                <viewController id="7ym-bX-Oap" customClass="LengthViewController" customModule="UnitConversionTabBar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ij2-Ar-06g">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="v24-1b-uru">
+                                <rect key="frame" x="19" y="308.33333333333331" width="355" height="235.66666666666669"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="input" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wl9-Ew-Ogv">
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="34.333333333333336"/>
+                                        <color key="backgroundColor" red="0.64974985647880579" green="0.86078917980000003" blue="0.62729187438750722" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="46f-7T-Bn0">
+                                        <rect key="frame" x="0.0" y="50.333333333333371" width="355" height="35.333333333333343"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <segments>
+                                            <segment title="Meter"/>
+                                            <segment title="centimeter"/>
+                                            <segment title="kilometer"/>
+                                            <segment title="miles"/>
+                                        </segments>
+                                        <color key="selectedSegmentTintColor" red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </segmentedControl>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Bv-ig-qru">
+                                        <rect key="frame" x="0.0" y="100.66666666666669" width="355" height="34.333333333333343"/>
+                                        <color key="backgroundColor" red="0.92268666933182697" green="0.44207826530167105" blue="0.96611279249191284" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Convert">
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="convert:" destination="7ym-bX-Oap" eventType="touchUpInside" id="SjZ-HK-hHk"/>
+                                        </connections>
+                                    </button>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="COj-KN-Uke">
+                                        <rect key="frame" x="0.0" y="151" width="355" height="35.333333333333343"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <segments>
+                                            <segment title="Meter"/>
+                                            <segment title="Centimeter"/>
+                                            <segment title="Kilometer"/>
+                                            <segment title="Miles"/>
+                                        </segments>
+                                        <color key="selectedSegmentTintColor" red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </segmentedControl>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="output" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lat-tr-YCp" userLabel="Output Text Field">
+                                        <rect key="frame" x="0.0" y="201.33333333333337" width="355" height="34.333333333333343"/>
+                                        <color key="backgroundColor" red="0.64974985649999994" green="0.86078917980000003" blue="0.6272918744" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ug9-40-pwZ"/>
+                        <color key="backgroundColor" red="0.51716603930000005" green="0.63214843340000004" blue="0.96611279250000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="v24-1b-uru" firstAttribute="centerX" secondItem="Ij2-Ar-06g" secondAttribute="centerX" id="YaS-uK-4lh"/>
+                            <constraint firstItem="v24-1b-uru" firstAttribute="centerY" secondItem="Ij2-Ar-06g" secondAttribute="centerY" id="eYx-2r-1LM"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Length " id="Wpc-RW-QES"/>
+                    <connections>
+                        <outlet property="fromSeg" destination="46f-7T-Bn0" id="LUP-BE-1vN"/>
+                        <outlet property="inputTextField" destination="wl9-Ew-Ogv" id="Qkt-pl-WL9"/>
+                        <outlet property="outputTextField" destination="Lat-tr-YCp" id="OWC-8o-hw4"/>
+                        <outlet property="toSeg" destination="COj-KN-Uke" id="u2L-8l-T5J"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1ya-AY-P0c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="219" y="-542"/>
+        </scene>
+        <!--Temperature-->
+        <scene sceneID="jDa-Y5-wEo">
+            <objects>
+                <viewController id="1e8-qi-cVH" customClass="TempViewController" customModule="UnitConversionTabBar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cv6-eI-Qvj">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="uFi-fw-Z11">
+                                <rect key="frame" x="96.666666666666686" y="308.33333333333331" width="200" height="235.66666666666669"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W2W-lY-51Z">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="34.333333333333336"/>
+                                        <color key="backgroundColor" red="0.64974985649999994" green="0.86078917980000003" blue="0.6272918744" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="IGX-ul-aGy">
+                                        <rect key="frame" x="0.0" y="50.333333333333371" width="200" height="35.333333333333343"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <segments>
+                                            <segment title="Celsius"/>
+                                            <segment title="Fahrenheit"/>
+                                        </segments>
+                                        <color key="selectedSegmentTintColor" red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </segmentedControl>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ulf-Ln-QWq">
+                                        <rect key="frame" x="0.0" y="100.66666666666669" width="200" height="34.333333333333343"/>
+                                        <color key="backgroundColor" red="0.92268666929999998" green="0.4420782653" blue="0.96611279250000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Convert"/>
+                                        <connections>
+                                            <action selector="ConvertBtn:" destination="1e8-qi-cVH" eventType="touchUpInside" id="fhq-YJ-gOH"/>
+                                        </connections>
+                                    </button>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="zZp-qH-Gw1">
+                                        <rect key="frame" x="0.0" y="151" width="200" height="35.333333333333343"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <segments>
+                                            <segment title="Celsius"/>
+                                            <segment title="Fahrenheit"/>
+                                        </segments>
+                                        <color key="selectedSegmentTintColor" red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </segmentedControl>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fbJ-2n-iRI">
+                                        <rect key="frame" x="0.0" y="201.33333333333337" width="200" height="34.333333333333343"/>
+                                        <color key="backgroundColor" red="0.64974985649999994" green="0.86078917980000003" blue="0.6272918744" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="3pM-HR-yaA"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uQZ-RO-BlB"/>
+                        <color key="backgroundColor" red="0.26811893341195647" green="0.52054681899911315" blue="0.69499380961813106" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="uFi-fw-Z11" firstAttribute="centerY" secondItem="Cv6-eI-Qvj" secondAttribute="centerY" id="Fri-Ch-ICc"/>
+                            <constraint firstItem="uFi-fw-Z11" firstAttribute="centerX" secondItem="Cv6-eI-Qvj" secondAttribute="centerX" id="Jbd-5T-h1d"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Temperature" id="sk1-Ht-bVl"/>
+                    <connections>
+                        <outlet property="fromTempSeg" destination="IGX-ul-aGy" id="fnp-IY-EEJ"/>
+                        <outlet property="inputTextField" destination="W2W-lY-51Z" id="NHc-Jh-8sf"/>
+                        <outlet property="outputTempSeg" destination="fbJ-2n-iRI" id="J7K-4V-jgP"/>
+                        <outlet property="toTempSeg" destination="zZp-qH-Gw1" id="LRq-yh-Wcv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p1N-ye-1jF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="218" y="122"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="k9q-lX-U7K">
+            <objects>
+                <tabBarController id="7Da-LG-85o" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TF0-rG-FeE">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.59719787866379015" green="0.43802409622574279" blue="0.61647790670394897" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="7ym-bX-Oap" kind="relationship" relationship="viewControllers" id="wAQ-CQ-mfa"/>
+                        <segue destination="1e8-qi-cVH" kind="relationship" relationship="viewControllers" id="PaN-qx-ong"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ePP-Gu-Qsx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-687" y="-238"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
